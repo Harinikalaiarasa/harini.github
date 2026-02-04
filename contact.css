@@ -25,19 +25,74 @@
 }
 
 .logo {
-  color: white;
   font-size: 22px;
   font-weight: bold;
+  color: white;
 }
 
-.navbar nav a {
-  color: white;
-  margin-left: 20px;
-  text-decoration: none;
+/* NAV LINKS */
+.nav-links {
+  display: flex;
+  gap: 20px;
+  top: 0;
 }
-.navbar nav a:hover {
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+.nav-links a:hover {
     color: bisque;
-}  
+}
+
+/* HIDE CHECKBOX */
+#menu-toggle {
+  display: none;
+}
+
+/* HAMBURGER ICON */
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-icon span {
+  height: 3px;
+  width: 25px;
+  background: white;
+  margin: 4px 0;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+
+  .menu-icon {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    background: #0a1aff;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+  }
+
+  .nav-links a {
+    padding: 15px 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  #menu-toggle:checked ~ .nav-links {
+    display: flex;
+  }
+}
   /* contact */
 .contact-us {
     position: relative;
@@ -59,6 +114,7 @@
 .contact h2 {
     font-size: 36px;
     margin-bottom: 15px;
+    color: blue;
 }
 
 .contact p {
