@@ -12,64 +12,90 @@
     'opsz' 24
 }
 
-/* header */
 
-/* Navbar  */
+/* NAVBAR */
 .navbar {
-  background-color: blue;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 15px 40px;
+  background: blue;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 12px 25px;
-}
-.navbar h1 {
-    color: white;
+  align-items: center;
+  z-index: 10;
 }
 
-.menu-icon {
-  display: none;
-  font-size: 26px;
+.logo {
+  font-size: 22px;
+  font-weight: bold;
   color: white;
-  cursor: pointer;
 }
 
-#menu-toggle {
-  display: none;
-}
-
+/* NAV LINKS */
 .nav-links {
   display: flex;
-  gap: 15px;
+  gap: 20px;
+  top: 0;
 }
 
 .nav-links a {
   color: white;
   text-decoration: none;
-  padding: 10px;
+  font-size: 16px;
+}
+.nav-links a:hover {
+    color: bisque;
 }
 
+/* HIDE CHECKBOX */
+#menu-toggle {
+  display: none;
+}
 
-/* MOBILE NAVBAR */
+/* HAMBURGER ICON */
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-icon span {
+  height: 3px;
+  width: 25px;
+  background: white;
+  margin: 4px 0;
+  border-radius: 5px;
+}
+
 @media (max-width: 768px) {
+
   .menu-icon {
-    display: block;
+    display: flex;
   }
 
   .nav-links {
     position: absolute;
-    top: 60px;
-    right: 0;
-    background: blue;
+    top: 65px;
+    left: 0;
     width: 100%;
+    background: #0a1aff;
     flex-direction: column;
     align-items: center;
     display: none;
+  }
+
+  .nav-links a {
+    padding: 15px 0;
+    width: 100%;
+    text-align: center;
   }
 
   #menu-toggle:checked ~ .nav-links {
     display: flex;
   }
 }
+
 
 
 /* hero */
@@ -186,9 +212,13 @@
 }
 
 .card h2 {
+    font-size: 20px;
     margin: 15px 0 10px;
 }
-
+.card h3 {
+    font-size: 20px;
+    margin: 15px 0 10px;
+}
 
 .card p {
     font-size: 14px;
@@ -206,7 +236,7 @@
 }
 
 .card button:hover {
-    background: #ffffff;
+    background: wheat;
 }
 
 @media (max-width: 768px) {
@@ -444,6 +474,7 @@
 .contact h2 {
     font-size: 36px;
     margin-bottom: 15px;
+    color: blue;
 }
 
 .contact p {
