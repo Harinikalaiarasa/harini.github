@@ -1,13 +1,15 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; 
 }
-
-body {
-  font-family: 'Merriweather', serif;
-  background: #f5f5f2;
-  color: #2f3e2f;
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
 }
 /* NAVBAR */
 .navbar {
@@ -23,20 +25,75 @@ body {
 }
 
 .logo {
-  color: white;
   font-size: 22px;
   font-weight: bold;
+  color: white;
 }
 
-.navbar nav a {
-  color: white;
-  margin-left: 20px;
-  text-decoration: none;
+/* NAV LINKS */
+.nav-links {
+  display: flex;
+  gap: 20px;
+  top: 0;
 }
-.navbar nav a:hover {
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+.nav-links a:hover {
     color: bisque;
 }
-/* HERO */
+
+/* HIDE CHECKBOX */
+#menu-toggle {
+  display: none;
+}
+
+/* HAMBURGER ICON */
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-icon span {
+  height: 3px;
+  width: 25px;
+  background: white;
+  margin: 4px 0;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+
+  .menu-icon {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    background: #0a1aff;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+  }
+
+  .nav-links a {
+    padding: 15px 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  #menu-toggle:checked ~ .nav-links {
+    display: flex;
+  }
+}
+        /* HERO SECTION */
 .hero {
   height: 90vh;
   background: url("images/naturewalks\ \(1\).jpg") center/cover no-repeat;
@@ -189,6 +246,95 @@ body {
     font-size: 13px;
     color: #6b8e23;
 }
+/* ===============================
+   MOBILE RESPONSIVE (PHONES)
+   =============================== */
+@media (max-width: 768px) {
 
+  /* NAVBAR */
+  .navbar {
+    padding: 12px 20px;
+  }
 
+  .logo {
+    font-size: 18px;
+  }
 
+  /* HERO SECTION */
+  .hero {
+    height: auto;
+    padding: 120px 15px 60px;
+  }
+
+  .hero-content {
+    padding: 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  /* FEATURES SECTION */
+  .features {
+    flex-direction: column;
+    gap: 25px;
+    padding: 40px 15px;
+  }
+
+  .feature h1 {
+    font-size: 18px;
+  }
+
+  .feature p {
+    font-size: 15px;
+  }
+
+  /* TREK CARDS */
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 350px;
+    margin: 15px auto;
+  }
+
+  .card img {
+    height: 180px;
+  }
+
+  /* HIGHLIGHTS */
+  .section-title {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .highlights {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .highlights img {
+    height: 180px;
+  }
+
+  /* PLAN SECTION */
+  .plan h2 {
+    font-size: 1.3rem;
+  }
+
+  .plan p {
+    font-size: 1rem;
+  }
+
+  /* FOOTER */
+  .footer-copy {
+    font-size: 12px;
+  }
+}
