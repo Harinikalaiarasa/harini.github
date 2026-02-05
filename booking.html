@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Package</title>
+    <link rel="stylesheet" href="booking.css">
+
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+     <!-- navbar -->
+<header class="navbar">
+  <div class="logo"><i>ExploreWorld</i></div>
+
+  <input type="checkbox" id="menu-toggle">
+  <label for="menu-toggle" class="menu-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+    <!-- nav-links -->
+  <nav class="nav-links">
+    <a href="trips.html">Home</a>
+    <a href="destination.html">Destination</a>
+    <a href="adventures.html">Adventures</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="packages.html">Packages</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+  <!-- booking -->
+    <section class="booking" id="booking">
+
+  <h2>Complete Your Booking</h2>
+  <p>Fill the details and we’ll plan your perfect Munnar trip</p>
+
+  <form class="booking-form">
+
+    <label>Full Name</label>
+    <input type="text" placeholder="Enter your name">
+
+    <label>Email Address</label>
+    <input type="email" placeholder="Enter your email">
+    <button type="button" class="send-btn">Send Code</button>
+
+    <label>Verify Code</label>
+    <input type="text" placeholder="Enter verification code">
+    <button type="button" class="verify-btn">Verify</button>
+
+
+    <label>Phone Number</label>
+    <input type="tel" placeholder="Enter your mobile number">
+
+    <label>Travel Type</label>
+    <select>
+      <option>Select Travel Mode</option>
+      <option>Bus</option>
+      <option>Train</option>
+      <option>Flight</option>
+    </select>
+
+    <label>Hotel Type</label>
+    <select>
+      <option>Select Hotel</option>
+      <option>Basic</option>
+      <option>Premium</option>
+      <option>Luxury</option>
+    </select>
+
+    <label>Travel Date</label>
+    <input type="date">
+
+    <label>Number of Persons</label>
+    <input type="number" placeholder="Eg: 2">
+
+    <label>Special Requests</label>
+    <textarea placeholder="Any special requirements..."></textarea>
+
+    <button>Confirm Booking</button>
+
+  </form>
+
+</section>
+
+</body>
+</html>
+
